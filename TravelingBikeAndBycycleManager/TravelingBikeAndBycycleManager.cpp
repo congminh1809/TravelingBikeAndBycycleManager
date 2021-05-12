@@ -98,23 +98,23 @@ public:
 void Xuat_Tat_Ca_Thong_Tin_Thue_Xe(XEDAP ds_xedap[], int n, XEMAY ds_xemay[], int m)
 {
 	int dem = 1;
-	cout << "\n\n\t\t DANH SACH THUE XE DAP\n";
+	cout << "\n\n\t\t DANH SACH THUE XE DAP\n" << endl;
 	// xuất danh sách xe đạp
 	for (int i = 0; i < n; i++)
 	{
 		cout << "\n\tTHONG TIN THUE XE DAP THU " << dem++ << endl;
 		ds_xedap[i].XuatThongTin();
-		cout << "\nTien thue: " << (size_t)ds_xedap[i].TinhTienThueXe();
+		cout << "\nTien thue: " << (size_t)ds_xedap[i].TinhTienThueXe() << endl;
 
 	}
 
-	cout << "\n\n\t\t DANH SACH THUE XE MAY\n";
+	cout << "\n\n\t\t DANH SACH THUE XE MAY\n" << endl;
 	// xuất danh sách xe máy
 	for (int i = 0; i < m; i++)
 	{
 		cout << "\n\tTHONG TIN THUE MAY THU " << dem++ << endl;
 		ds_xemay[i].XuatThongTin();
-		cout << "\nTien thue: " << (size_t)ds_xemay[i].TinhTienThueXe();
+		cout << "\nTien thue: " << (size_t)ds_xemay[i].TinhTienThueXe() << endl;
 	}
 }
 
@@ -144,16 +144,16 @@ void Menu(XEDAP ds_xedap[], int n, XEMAY ds_xemay[], int m)
 	while (true)
 	{
 		system("cls");
-		cout << "\n\n\t\t ====== QUAN LY XE ======";
-		cout << "\n\t1. Nhap danh sach thue xe dap va xe may";
-		cout << "\n\t2. Xuat tat ca thong tin thue xe";
-		cout << "\n\t3. Tinh tong so tien cho thue xe dap va xe may";
-		cout << "\n\t4. Xuat tat ca cac thong tin lien quan den viec cho thue xe dap";
-		cout << "\n\t5. Tinh tong so tien cho thue xe may loai 250 phan khoi";
-		cout << "\n\t0. Ket thuc";
-		cout << "\n\n\t\t ============== END ============";
+		cout << "\n\n\t\t ====== QUAN LY XE ======" << endl;
+		cout << "\n\t1. Nhap danh sach thue xe dap va xe may" << endl;
+		cout << "\n\t2. Xuat tat ca thong tin thue xe" << endl;
+		cout << "\n\t3. Tinh tong so tien cho thue xe dap va xe may" << endl;
+		cout << "\n\t4. Xuat tat ca cac thong tin lien quan den viec cho thue xe dap" << endl;
+		cout << "\n\t5. Tinh tong so tien cho thue xe may loai 250 phan khoi" << endl;
+		cout << "\n\t0. Ket thuc" << endl;
+		cout << "\n\n\t\t ============== END ============" << endl;
 
-		cout << "\nNhap lua chon: ";
+		cout << "\nNhap lua chon: " << endl;
 		cin >> luachon;
 
 		if (luachon == 1)
@@ -163,11 +163,11 @@ void Menu(XEDAP ds_xedap[], int n, XEMAY ds_xemay[], int m)
 			{
 				system("cls");
 
-				cout << "\nNhap loai xe muon thue: ";
+				cout << "\nNhap loai xe muon thue: " << endl;
 
-				cout << "\n1. Thue XE DAP";
-				cout << "\n2. Thue XE MAY";
-				cout << "\n0. Ket thuc";
+				cout << "\n1. Thue XE DAP" << endl;
+				cout << "\n2. Thue XE MAY" << endl;
+				cout << "\n0. Ket thuc" << endl;
 
 				//cout << "\nNhap loai xe muon thue: ";
 				cin >> chon;
@@ -175,7 +175,7 @@ void Menu(XEDAP ds_xedap[], int n, XEMAY ds_xemay[], int m)
 				if (chon == 1)
 				{
 					XEDAP x;
-					cout << "\n\n\t\t NHAP THONG TIN THUE XE DAP\n";
+					cout << "\n\n\t\t NHAP THONG TIN THUE XE DAP\n" << endl;
 					x.NhapThongTin();
 					ds_xedap[n] = x;
 					n++;
@@ -183,7 +183,7 @@ void Menu(XEDAP ds_xedap[], int n, XEMAY ds_xemay[], int m)
 				else if (chon == 2)
 				{
 					XEMAY x;
-					cout << "\n\n\t\t NHAP THONG TIN THUE XE MAY\n";
+					cout << "\n\n\t\t NHAP THONG TIN THUE XE MAY\n" << endl;
 					x.NhapThongTin();
 					ds_xemay[m] = x;
 					m++;
@@ -203,7 +203,7 @@ void Menu(XEDAP ds_xedap[], int n, XEMAY ds_xemay[], int m)
 		}
 		else if (luachon == 3)
 		{
-			cout << "\n\n\t\tTONG TIEN THUE XE: " << (size_t)Tinh_Tong_Tien_Thue_Xe(ds_xedap, n, ds_xemay, m);
+			cout << "\n\n\t\tTONG TIEN THUE XE: " << (size_t)Tinh_Tong_Tien_Thue_Xe(ds_xedap, n, ds_xemay, m) << endl;
 			system("pause");
 		}
 		else if (luachon == 4)
@@ -214,7 +214,7 @@ void Menu(XEDAP ds_xedap[], int n, XEMAY ds_xemay[], int m)
 			{
 				cout << "\n\tTHONG TIN THUE XE DAP THU " << i + 1 << endl;
 				ds_xedap[i].XuatThongTin();
-				cout << "\nTien thue: " << (size_t)ds_xedap[i].TinhTienThueXe();
+				cout << "\nTien thue: " << (size_t)ds_xedap[i].TinhTienThueXe() << endl;
 			}
 			system("pause");
 		}
@@ -229,7 +229,7 @@ void Menu(XEDAP ds_xedap[], int n, XEMAY ds_xemay[], int m)
 				{
 					cout << "\n\tTHONG TIN THUE MAY THU " << ++dem << endl;
 					ds_xemay[i].XuatThongTin();
-					cout << "\nTien thue: " << (size_t)ds_xemay[i].TinhTienThueXe();
+					cout << "\nTien thue: " << (size_t)ds_xemay[i].TinhTienThueXe() << endl;
 				}
 			}
 			system("pause");
