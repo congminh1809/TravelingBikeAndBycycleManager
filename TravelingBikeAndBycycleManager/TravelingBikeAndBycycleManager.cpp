@@ -162,11 +162,14 @@ void Menu(XEDAP ds_xedap[], int n, XEMAY ds_xemay[], int m)
 			while (true)
 			{
 				system("cls");
+
+				cout << "\nNhap loai xe muon thue: ";
+
 				cout << "\n1. Thue XE DAP";
 				cout << "\n2. Thue XE MAY";
 				cout << "\n0. Ket thuc";
 
-				cout << "\nNhap loai xe muon thue: ";
+				//cout << "\nNhap loai xe muon thue: ";
 				cin >> chon;
 
 				if (chon == 1)
